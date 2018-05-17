@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x0100fb487287761b49d98ccfcb720be8a4b9"
+               Name="DBS.Mural2 - MuralContentType"
+               Group="Custom Content Types"
+               Description="My Content Type"
+               Inherits="TRUE"
+               Version="0">
+    <FieldRefs>
+
+      <FieldRef ID="{5C301761-6062-48CE-8388-A3EA5FBC1910}" Name="Mensagem"     />
+      <FieldRef ID="{3F453C60-5645-4D42-8CC9-E97DD014B351}" Name="Destinatario" />               
+      <FieldRef ID="{A5CD692E-A275-437A-987F-E17547629F83}" Name="TipoMensagem" />
+      
+    </FieldRefs>
+  </ContentType>
+</Elements>

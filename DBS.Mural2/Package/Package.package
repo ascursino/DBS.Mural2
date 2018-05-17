@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="ffb53cfa-5e7f-4a81-8396-4260527fb496" solutionId="ffb53cfa-5e7f-4a81-8396-4260527fb496" resetWebServer="false" name="DBS.Mural2" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="93316a0f-94c0-4301-90af-535e15c6368a" />
+    <featureReference itemId="cc9dc142-05f2-47cb-80ec-82e15876d316" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="af5b07e3-bd0b-40c9-b2c9-d7c8565b1d78" />
+    <projectItemReference itemId="9f8fd34b-e066-474a-bee1-5191ac07602c" />
+  </projectItems>
+</package>

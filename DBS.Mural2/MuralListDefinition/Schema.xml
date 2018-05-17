@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="MuralListDefinition" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/DBS.Mural2-MuralListDefinition" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      <ContentType ID="0x0100fb487287761b49d98ccfcb720be8a4b9" Name="DBS.Mural2 - MuralContentType" Group="Custom Content Types" Description="My Content Type" Inherits="TRUE" Version="0">
+        <FieldRefs>
+          <FieldRef ID="{5C301761-6062-48CE-8388-A3EA5FBC1910}" Name="Mensagem" />
+          <FieldRef ID="{3F453C60-5645-4D42-8CC9-E97DD014B351}" Name="Destinatario" />
+          <FieldRef ID="{A5CD692E-A275-437A-987F-E17547629F83}" Name="TipoMensagem" />
+        </FieldRefs>
+      </ContentType>
+    </ContentTypes>
+    <Fields>
+      <Field ID="{5c301761-6062-48ce-8388-a3ea5fbc1910}" Type="Note" Name="Mensagem" DisplayName="Mensagem" Required="TRUE" ShowInDisplayForm="TRUE" ShowInNewForm="TRUE" ShowInEditForm="TRUE" NumLines="6" RichText="TRUE" RichTextMode="FullHtml" IsolateStyles="TRUE"/>
+      <Field ID="{3f453c60-5645-4d42-8cc9-e97dd014b351}" Type="User" Name="Destinatario" DisplayName="Destinatário" Required="TRUE" ShowInDisplayForm="TRUE" ShowInNewForm="TRUE" ShowInEditForm="TRUE" List="UserInfo" UserSelectionMode="PeopleOnly" UserSelectionScope="0" />
+      <Field ID="{a5cd692e-a275-437a-987f-e17547629f83}" Type="Choice" Name="TipoMensagem" DisplayName="Tipo de Mensagem" Required="TRUE" ShowInDisplayForm="TRUE" ShowInNewForm="TRUE" ShowInEditForm="TRUE">
+    <CHOICES>
+      <CHOICE>Particular</CHOICE>
+      <CHOICE>Publica</CHOICE>
+      <CHOICE>Aniversario</CHOICE>      
+    </CHOICES>
+  </Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/images/generic.png" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <!--<FieldRef Name="Attachments"></FieldRef>-->
+          <FieldRef Name="LinkTitle"/>         
+          <FieldRef ID="{5C301761-6062-48CE-8388-A3EA5FBC1910}" Name="Mensagem" />
+          <FieldRef ID="{3F453C60-5645-4D42-8CC9-E97DD014B351}" Name="Destinatario" />
+          <FieldRef ID="{A5CD692E-A275-437A-987F-E17547629F83}" Name="TipoMensagem" />
+          <FieldRef Name="Author"  />         
+          <FieldRef Name="Created" />
+          
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

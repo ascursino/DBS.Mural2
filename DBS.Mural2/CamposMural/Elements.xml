@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+  <Field ID="{5C301761-6062-48CE-8388-A3EA5FBC1910}" Type="Note"      Name="Mensagem"       DisplayName="Mensagem"         Required="TRUE" ShowInDisplayForm="TRUE" ShowInNewForm="TRUE" ShowInEditForm="TRUE" NumLines="6" RichText="TRUE" RichTextMode="FullHtml" IsolateStyles="TRUE"/>  
+  <Field ID="{3F453C60-5645-4D42-8CC9-E97DD014B351}" Type="User"      Name="Destinatario"   DisplayName="Destinatário"     Required="TRUE" ShowInDisplayForm="TRUE" ShowInNewForm="TRUE" ShowInEditForm="TRUE" List="UserInfo" UserSelectionMode="PeopleOnly" UserSelectionScope="0"/>  
+  <Field ID="{A5CD692E-A275-437A-987F-E17547629F83}" Type="Choice"    Name="TipoMensagem"   DisplayName="Tipo de Mensagem" Required="TRUE" ShowInDisplayForm="TRUE" ShowInNewForm="TRUE" ShowInEditForm="TRUE">
+    <CHOICES>
+      <CHOICE>Particular</CHOICE>
+      <CHOICE>Publica</CHOICE>
+      <CHOICE>Aniversario</CHOICE>      
+    </CHOICES>
+  </Field>
+  <!--Field ID="{220A73EB-99D1-4030-B050-300434547273}" Type="Boolean"   Name="Lida"           DisplayName="Lida?"            Required="TRUE" ShowInDisplayForm="TRUE" ShowInNewForm="TRUE" ShowInEditForm="TRUE"/-->
+
+</Elements>

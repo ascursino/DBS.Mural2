@@ -1,0 +1,14 @@
+﻿li.li_Particular
+{
+    list-style-image: url("/_layouts/images/DBS.Mural2/Private-20px.png");
+}
+
+li.li_Publica
+{
+    list-style-image: url("/_layouts/images/DBS.Mural2/Public-20px.png");
+}
+
+li.li_Aniversario
+{
+    list-style-image: url("/_layouts/images/DBS.Mural2/Presente-20px.png");
+}
